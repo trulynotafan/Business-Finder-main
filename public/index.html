@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Search App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Business Finder</h1>
+            <p class="author">by Afaan</p>
+            <div class="description">
+                <p>Find potential clients by discovering businesses without websites but with contact information. 
+                   Perfect for web developers, digital agencies, and marketing professionals.</p>
+                <div class="features">
+                    <span class="feature-tag">🎯 200km Radius Search</span>
+                    <span class="feature-tag">📧 Email & Phone Filters</span>
+                    <span class="feature-tag">🗺️ Interactive Map</span>
+                    <span class="feature-tag">📥 JSON Export</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div id="map"></div>
+
+            <form id="searchForm" class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="location">
+                            <i class="icon">📍</i> Location
+                        </label>
+                        <input type="text" 
+                               id="location" 
+                               placeholder="Enter city or address"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="radius">
+                            <i class="icon">⭕</i> Search Radius (km)
+                        </label>
+                        <input type="number" 
+                               id="radius" 
+                               min="1" 
+                               max="200" 
+                               value="50"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="businessType">
+                            <i class="icon">🏢</i> Business Categories
+                        </label>
+                        <select id="businessType" multiple size="5">
+                            <option value="shop">Shops</option>
+                            <option value="restaurant">Restaurants</option>
+                            <option value="cafe">Cafes</option>
+                            <option value="bar">Bars</option>
+                            <option value="hairdresser">Hairdressers</option>
+                            <option value="plumber">Plumbers</option>
+                            <option value="electrician">Electricians</option>
+                            <option value="carpenter">Carpenters</option>
+                            <option value="painter">Painters</option>
+                            <option value="locksmith">Locksmiths</option>
+                            <option value="heating">Heating Engineers</option>
+                            <option value="builder">Builders</option>
+                            <option value="gardener">Gardeners</option>
+                            <option value="supermarket">Supermarkets</option>
+                            <option value="butcher">Butchers</option>
+                            <option value="bakery">Bakeries</option>
+                        </select>
+                        <small>Hold Ctrl/Cmd to select multiple categories</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <i class="icon">📞</i> Contact Filters
+                        </label>
+                        <select id="contactFilter" multiple size="3">
+                            <option value="any" selected>Any Contact Method</option>
+                            <option value="email">Has Email</option>
+                            <option value="phone">Has Phone</option>
+                        </select>
+                        <small>Select preferred contact methods</small>
+                    </div>
+                </div>
+
+                <button type="submit" class="search-button">
+                    <i class="icon">🔍</i> Search Businesses
+                </button>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div id="searchStats" class="search-stats">
+                <div class="progress-info"></div>
+                <div class="results-info"></div>
+            </div>
+
+            <div class="export-controls">
+                <button id="downloadJSON" class="download-btn" disabled>
+                    <span class="icon">📥</span> Download Results as JSON
+                </button>
+                <span id="resultCount" class="result-count"></span>
+            </div>
+
+            <div id="businessList"></div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

